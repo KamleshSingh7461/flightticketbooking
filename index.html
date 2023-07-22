@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Flight Ticket Booking</title>
+</head>
+<body>
+  
+        <div id="nav">
+                <a href="index.html>"><img src="logo.png" alt="logo"></div></a>
+                <ul>
+                    <li><a href="">Destination</a></li>
+                    <li><a href="">My Booking</a></li>
+                    <li><a href="">Help Centre</a></li>
+                    <li><a href="">About Us</a></li>
+                    <div class="dropdown">
+                        <button class="dropbtn"><b>Travel Agencies</b>
+                          <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                          <a href="#">Log In</a>
+                          <a href="#">Register</a>
+                          <a href="#">More Information</a>
+                        </div>
+                      </div> 
+                    
+    </div>
+    <div class="content">
+        <p class="content2">Are you looking for airport transfers?</p>
+        <p class="con3">You have come to the right place</p>
+    </div>
+        <div class="switch">
+    <label class="switch">
+        <input type="checkbox" id="mySwitch" onchange="toggleForm()">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div id="fnc">
+        <!-- --------------- -->
+        
+          
+            <!-- form fields for form 1 -->
+            <form action="search.html" method="post" id="form1">
+                <label style="margin-left: -60%;">One-Way</label>
+                <div class="search">
+                    <span class="icon icon-location"></span>
+                    <input type="text" name="from" placeholder="From : Start typing your pickup location" required>
+                    
+                    <input type="text" name="to" placeholder="To : Start typing your dropoff location" required><br>
+                    
+                    <input type="date" name="date" placeholder="11-05-1998" value="11-05-1998" required>
+                    <input type="time" name="time" placeholder="05:00" value="05:00" required><br>
+                    <label for="numPersons">Number of Adults:</label>
+                    <input type="range" id="numPersons" name="numPersons" min="1" max="5" value="0" required>
+                    <output for="numPersons" id="numPersonsOutput">0</output>
+                    <label for="numPersons">Number of Children:</label>
+                    <input type="range" id="numPersonsa" name="numPersonsa" min="0" max="5" value="0">
+                    <output for="numPersons" id="numPersonsOutputa">0</output>
+                    <label for="numPersonsb">Number of Infants:</label>
+                    <input type="range" id="numPersonsb" name="numPersonsb" min="0" max="5" value="0">
+                    <output for="numPersonsb" id="numPersonsOutputb">0</output>
+                    <br>
+                    <script>
+                          var numPersonsSlider = document.getElementById("numPersons");
+                          var numPersonsOutput = document.getElementById("numPersonsOutput");
+                          numPersonsOutput.innerHTML = numPersonsSlider.value;
+                          numPersonsSlider.oninput = function() {
+                              numPersonsOutput.innerHTML = this.value;
+                          }
+                          var numPersonsSlidera = document.getElementById("numPersonsa");
+                          var numPersonsOutputa = document.getElementById("numPersonsOutputa");
+                          numPersonsOutputa.innerHTML = numPersonsSlidera.value;
+                          numPersonsSlidera.oninput = function() {
+                              numPersonsOutputa.innerHTML = this.value;
+                          }
+                          var numPersonsSliderb = document.getElementById("numPersonsb");
+                          var numPersonsOutputb = document.getElementById("numPersonsOutputb");
+                          numPersonsOutputb.innerHTML = numPersonsSliderb.value;
+                          numPersonsSliderb.oninput = function() {
+                              numPersonsOutputb.innerHTML = this.value;
+                          }
+                    </script>
+                    <input type="submit" name="submit" value="Search">
+                </div>
+            </form>
+            <!-- form fields for form 2 -->
+            <form action="search.html" method="post" id="form2">
+                <label style="margin-left: -60%;">Round-trip</label>
+                <div class="search">
+                    
+                    <input type="text" name="from" placeholder="From : Start typing your pickup location">
+                    
+                    <input type="text" name="to" placeholder="To : Start typing your dropoff location"><br>
+                    
+                    <input type="date" name="date" placeholder="11-05-1998" value="11-05-1998"><input type="time" name="time" placeholder="12:00"value="05:00"><br>
+                    
+                    <input type="date" name="date" placeholder="Return Date"><input type="time" name="time" placeholder="05:00" value="05:00"><br>
+                    <label for="numPersons1">Number of Adults:</label>
+                    <input type="range" id="numPersons1" name="numPersons1" min="1" max="5" value="0">
+                    <output for="numPersons1" id="numPersonsOutput1">0</output>
+                    <label for="numPersons2">Number of Children:</label>
+                    <input type="range" id="numPersons2" name="numPersons2" min="0" max="5" value="0">
+                    <output for="numPersons2" id="numPersonsOutput2">0</output>
+                    <label for="numPersons3">Number of Infants:</label>
+                    <input type="range" id="numPersons3" name="numPersons3" min="0" max="5" value="0">
+                    <output for="numPersons3" id="numPersonsOutput3">0</output>
+                    <br>
+                    <script>
+                            var numPersonsSlider1 = document.getElementById("numPersons1");
+                            var numPersonsOutput1 = document.getElementById("numPersonsOutput1");
+                            numPersonsOutput1.innerHTML = numPersonsSlider1.value;
+                            numPersonsSlider1.oninput = function() {
+                            numPersonsOutput1.innerHTML = this.value;
+                        }
+                            var numPersonsSlider2 = document.getElementById("numPersons2");
+                            var numPersonsOutput2 = document.getElementById("numPersonsOutput2");
+                            numPersonsOutput2.innerHTML = numPersonsSlider2.value;
+                            numPersonsSlider2.oninput = function() {
+                            numPersonsOutput2.innerHTML = this.value;
+                        }
+                          var numPersonsSlider3 = document.getElementById("numPersons3");
+                            var numPersonsOutput3 = document.getElementById("numPersonsOutput3");
+                            numPersonsOutput3.innerHTML = numPersonsSlider3.value;
+                            numPersonsSlider3.oninput = function() {
+                            numPersonsOutput3.innerHTML = this.value;
+                        }
+                    </script>
+                    <input type="submit" name="submit" value="Search">
+                </div>
+          </form>
+          
+          <script>
+            // Save the state of the checkbox when the form is submitted
+document.getElementById("form1").addEventListener("submit", function() {
+    localStorage.setItem("switchState", document.getElementById("mySwitch").checked);
+});
+document.getElementById("form2").addEventListener("submit", function() {
+    localStorage.setItem("switchState", document.getElementById("mySwitch").checked);
+});
+
+// Retrieve the saved state of the checkbox when the page is loaded
+window.addEventListener("load", function() {
+    var switchState = localStorage.getItem("switchState");
+    if (switchState !== null) {
+        document.getElementById("mySwitch").checked = (switchState === "true");
+        toggleForm();
+    }
+});
+
+function toggleForm() {
+    var switchState = document.getElementById("mySwitch").checked;
+    if (switchState) {
+        document.getElementById("form1").style.display = "none";
+        document.getElementById("form2").style.display = "block";
+    } else {
+        document.getElementById("form1").style.display = "block";
+        document.getElementById("form2").style.display = "none";
+    }
+}
+          </script>
+          <!--  -->
+    </div>
+
+</body>
+</html>
